@@ -1,0 +1,70 @@
+html{
+	font-family: 'Roboto', sans-serif;
+}
+#container{
+	display:flex;
+	flex-direction: row;
+	width:100%;
+}
+#profile-picture{
+	width:20%;
+	border-radius: 50%;
+}
+.container1{
+	display:flex;
+	flex-direction:column;
+	width:80%;
+}
+.container1 a{
+	padding-left: 5%;
+	font-size: 7vw;
+	color:#B64CFC;
+}
+#container2{
+	display:flex;
+	text-align: center;
+}
+.vamoscomecar{
+	display: inline-block;
+	margin-top:5vh;
+	background-color: #B64CFC;
+	padding: 2%;
+	border-radius:25px;
+	height:80vh;
+	width:96%;
+	font-size:6rem;
+	color:white;
+	text-decoration: none;
+}
+.vamoscomecar:hover{
+	background-color:#800097;
+	margin:auto;
+	display:flex;
+	margin-top:5vh;
+	padding: 2%;
+	border-radius:25px;
+	height:80vh;
+	width:96%;
+		font-size:6rem;
+	color:white;
+	text-decoration: none;
+}
+
+#pagina-senha{
+	background-color: #B64CFC;
+}
+#container-senha{
+	display:flex;
+	background-color: #B64CFC;
+	width:100%;
+	height:100vh;
+}
+#senha{
+	font-size:6rem;
+	background-color:white;
+	padding:5%;
+	border-radius:7%;
+	color:#B64CFC;
+	margin:auto;
+	text-decoration: none;
+}
