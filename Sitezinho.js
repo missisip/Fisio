@@ -1,4 +1,4 @@
-let links = document.querySelectorAll('#bottom-bar a')
+let links = document.querySelectorAll('#menu a')
 
 for (link of links) {
 	let target = link.getAttribute('data-target')
@@ -19,3 +19,5 @@ function mudaTela(target) {
 	tela_target.classList.add('active')
 	link_target.classList.add('active')
 }
+
+

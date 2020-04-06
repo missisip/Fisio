@@ -1,29 +1,390 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-<script type="text/javascript" src="Sitezinho.js"></script>
-<link href="Sitezinho.css" rel="stylesheet" type="text/css">
+  <title>Projeto arduino</title>
+  <link rel="stylesheet" type="text/css" href="projeto_arduino.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-<div id="index">
-	<div id="container">
 
-		<img id="profile-picture" src="https://www.w3schools.com/howto/img_avatar.png">
+	
+	
+	<!--Menuzinho de navegação-->
 
-	<div class="container1">
-		<a>Olá, John Doe</a>
-		<a>Lorem Ipsum</a>
-	</div>
+<input type="checkbox" id="check">
+	<label id="icone" for="check"><img src="icone.png"></label>
+	
+	<div class="barra">
+		<nav id="navega">
+			<a href="#tela-1" data-target="tela-1" class="active"><div class="link">Informações</div></a>
+			<a href="#tela-2" data-target="tela-2"><div class="link">Histórico</div></a>
+		</nav>
+			
 	</div>
 	
-	<div id="container2">
-	<a class="vamoscomecar" href="Senha.html">
-	  Vamos Começar!
-	</a>
+<!--Tela de Informações-->
+<div class="tela active" id="tela-1">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-sm" style="margin-top: 100px; margin-left: 50px;">
+			<h3 style="color:#7950FF; font-weight: bold;">Olá, Mariana Santos!</h3>
+			<p style="font-size: 16px; color: #8F6CFF;">Vamos jogar hoje?</p>
+			<div class="col-sm" style="align-items: center; padding-top: 20px;">
+			 <a href="#" data-target="pagina-senha" onclick="mudaTela('pagina-senha')">
+			  <img id="imagem" src="imagem.png">
+			</a>
+		  </div>
+		</div>
+	  </div>
 	</div>
 </div>
+	
+	
+	
+	<!--Tela de Senha-->
+<div class ="tela" id="pagina-senha">
+	<div id="container-senha">
+		<div id="senha">
+				<a href="#" data-target="tela-avaliacao1" onclick="mudaTela('tela-avaliacao1')" id="style-senha"> Senha </a><br>
+		</div>
+	</div>
+</div>
+	
+		
+	
+	
+	<!--Tela de Historico-->
+<div class="tela" id="tela-2">
+<div class="container-historico"> 
+    <div class="linha row"> 
+      <div class="col-sm">  
+        <div class="card">
+          <p class="historico">Histórico</p>
+        </div>
+      </div>
+    </div>
+    <div class="linha row"> 
+      <div class="col-sm">  
+        <div class="card">
+          <p class="semana">Semana 1</p>
+          <a href="#" data-target="historico-dia" onclick="mudaTela('historico-dia')">
+          <div class="linha-dia row">
+            <div class="col-sm">
+              <p class="dia">31/03/2020</p>
+              <p class="feito">Exercícios realizados com sucesso!</p>
+            </div>
+          </div>
+          </a>
+          <hr>
+         <div class="linha-dia row">
+            <div class="col-sm">
+              <p class="dia">01/04/2020</p>
+              <p class="nao-feito">Exercícios não realizados!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   <div class="linha row"> 
+      <div class="col-sm">  
+        <div class="card">
+          <p class="semana">Semana 2</p>
+          <a href="#" data-target="historico-dia" onclick="mudaTela('historico-dia')">
+          <div class="linha-dia row">
+            <div class="col-sm">
+              <p class="dia">31/03/2020</p>
+              <p class="feito">Exercícios realizados com sucesso!</p>
+            </div>
+          </div>
+          <hr>
+         <div class="linha-dia row">
+            <div class="col-sm">
+              <p class="dia">01/04/2020</p>
+              <p class="nao-feito">Exercícios não realizados!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="linha row"> 
+      <div class="col-sm">  
+        <div class="card">
+          <p class="semana">Semana 3</p>
+          <a href="#" data-target="historico-dia" onclick="mudaTela('historico-dia')">
+          <div class="linha-dia row">
+            <div class="col-sm">
+              <p class="dia">31/03/2020</p>
+              <p class="feito">Exercícios realizados com sucesso!</p>
+            </div>
+          </div>
+          <hr>
+         <div class="linha-dia row">
+            <div class="col-sm">
+              <p class="dia">01/04/2020</p>
+              <p class="nao-feito">Exercícios não realizados!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+
+	<!--Tela de Historico do dia-->
+<div class="tela" id="historico-dia">
+<div id="container-historico-dia">
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <p class="data">31 de março</p>
+    </div>
+  </div>
+</div>
+  <div class="fundo"> 
+    <div class="row"> 
+      <div class="col-sm">  
+        <p class="titulo">Informações</p>
+        <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <hr class="espaco">
+        <p class="titulo">Avaliação</p>
+        <p class="texto">Nível de dor: 4<br>Nível de esforço: 6<br>Nível de diversão:9</p>
+        <hr class="espaco">
+        <p class="titulo">Comentários</p>
+        <p class="texto-final">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
+      </div>
+    </div>
+  </div>
+		</div>
+	</div>
+	
+
+	
+	
+	
+	
+<div class="tela" id="tela-avaliacao1">
+	<div class="container-avaliacao">
+		<div class="row">
+			<div class="col-sm">
+				<div class="avaliacao">
+					<h1 class="avaliacao__title">Qual foi o seu nível de dor?</h1>
+					<div class="slider__container">
+						<g>
+							<path d="M413.974,71.026C368.171,25.225,307.274,0,242.5,0S116.829,25.225,71.026,71.026C25.225,116.829,0,177.726,0,242.5   s25.225,125.671,71.026,171.474C116.829,459.775,177.726,485,242.5,485s125.671-25.225,171.474-71.026   C459.775,368.171,485,307.274,485,242.5S459.775,116.829,413.974,71.026z M242.5,455C125.327,455,30,359.673,30,242.5   S125.327,30,242.5,30S455,125.327,455,242.5S359.673,455,242.5,455z" ></path>
+							<path d="M318.514,231.486c19.299,0,35-15.701,35-35s-15.701-35-35-35s-35,15.701-35,35S299.215,231.486,318.514,231.486z" ></path>
+							<path d="M166.486,231.486c19.299,0,35-15.701,35-35s-15.701-35-35-35s-35,15.701-35,35S147.187,231.486,166.486,231.486z" ></path>
+							<path d="M242.5,271.486c-59.419,0-113.17,37.504-133.751,93.324l28.147,10.379c16.254-44.084,58.693-73.703,105.604-73.703   s89.35,29.619,105.604,73.703l28.147-10.379C355.67,308.99,301.919,271.486,242.5,271.486z" ></path>
+						</g>
+
+						<div class="slider" id="slider">
+							<div class="slider__img">
+								<svg version="1.1" class="slider__icon--big" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="510px" height="510px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
+									<g>
+										<g >
+											<path class="icon__path" id="test" d="M344.25,229.5c20.4,0,38.25-17.85,38.25-38.25S364.65,153,344.25,153S306,170.85,306,191.25S323.85,229.5,344.25,229.5z     M165.75,229.5c20.4,0,38.25-17.85,38.25-38.25S186.15,153,165.75,153s-38.25,17.85-38.25,38.25S145.35,229.5,165.75,229.5z     M255,408c66.3,0,122.4-43.35,145.35-102h-290.7C132.6,364.65,188.7,408,255,408z M255,0C114.75,0,0,114.75,0,255    s114.75,255,255,255s255-114.75,255-255S395.25,0,255,0z M255,459c-112.2,0-204-91.8-204-204S142.8,51,255,51s204,91.8,204,204    S367.2,459,255,459z" >
+
+											</path>
+										</g>
+									</g>
+								</div>
+								<div class="slider__dot"></div>
+								<div class="slider__inner"></div>
+							</div>
+
+							<g>
+								<g >
+									<path d="M344.25,229.5c20.4,0,38.25-17.85,38.25-38.25S364.65,153,344.25,153S306,170.85,306,191.25S323.85,229.5,344.25,229.5z     M165.75,229.5c20.4,0,38.25-17.85,38.25-38.25S186.15,153,165.75,153s-38.25,17.85-38.25,38.25S145.35,229.5,165.75,229.5z     M255,408c66.3,0,122.4-43.35,145.35-102h-290.7C132.6,364.65,188.7,408,255,408z M255,0C114.75,0,0,114.75,0,255    s114.75,255,255,255s255-114.75,255-255S395.25,0,255,0z M255,459c-112.2,0-204-91.8-204-204S142.8,51,255,51s204,91.8,204,204    S367.2,459,255,459z" ></path>
+								</g>
+							</g>
+            </svg>
+            <div class="row">
+            <!--<div class="opcoes col-sm-4">
+            Muita dor
+            </div>
+            <div class="opcoes col-sm-4">
+            Normal
+            </div>
+            <div class="opcoes col-sm-4">
+            Sem dor
+            </div>
+          -->
+          <div class="botao col-sm">
+            <a href="#" data-target="tela-avaliacao2" onclick="mudaTela('tela-avaliacao2')" class="avaliacao__btn">Enviar</a>
+          </div>
+          <div class="comentario col-sm">
+            <form>
+              <input type="text" id="fname" name="fname" placeholder="Adicionar comentário">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="tela" id="tela-avaliacao2">
+	<div class="container-avaliacao">
+		<div class="row">
+			<div class="col-sm">
+				<div class="avaliacao">
+					<h1 class="avaliacao__title">Qual foi o seu nível de dor?</h1>
+					<div class="slider__container">
+						<g>
+							<path d="M413.974,71.026C368.171,25.225,307.274,0,242.5,0S116.829,25.225,71.026,71.026C25.225,116.829,0,177.726,0,242.5   s25.225,125.671,71.026,171.474C116.829,459.775,177.726,485,242.5,485s125.671-25.225,171.474-71.026   C459.775,368.171,485,307.274,485,242.5S459.775,116.829,413.974,71.026z M242.5,455C125.327,455,30,359.673,30,242.5   S125.327,30,242.5,30S455,125.327,455,242.5S359.673,455,242.5,455z" ></path>
+							<path d="M318.514,231.486c19.299,0,35-15.701,35-35s-15.701-35-35-35s-35,15.701-35,35S299.215,231.486,318.514,231.486z" ></path>
+							<path d="M166.486,231.486c19.299,0,35-15.701,35-35s-15.701-35-35-35s-35,15.701-35,35S147.187,231.486,166.486,231.486z" ></path>
+							<path d="M242.5,271.486c-59.419,0-113.17,37.504-133.751,93.324l28.147,10.379c16.254-44.084,58.693-73.703,105.604-73.703   s89.35,29.619,105.604,73.703l28.147-10.379C355.67,308.99,301.919,271.486,242.5,271.486z" ></path>
+						</g>
+
+						<div class="slider" id="slider">
+							<div class="slider__img">
+								<svg version="1.1" class="slider__icon--big" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="510px" height="510px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
+									<g>
+										<g >
+											<path class="icon__path" id="test" d="M344.25,229.5c20.4,0,38.25-17.85,38.25-38.25S364.65,153,344.25,153S306,170.85,306,191.25S323.85,229.5,344.25,229.5z     M165.75,229.5c20.4,0,38.25-17.85,38.25-38.25S186.15,153,165.75,153s-38.25,17.85-38.25,38.25S145.35,229.5,165.75,229.5z     M255,408c66.3,0,122.4-43.35,145.35-102h-290.7C132.6,364.65,188.7,408,255,408z M255,0C114.75,0,0,114.75,0,255    s114.75,255,255,255s255-114.75,255-255S395.25,0,255,0z M255,459c-112.2,0-204-91.8-204-204S142.8,51,255,51s204,91.8,204,204    S367.2,459,255,459z" >
+
+											</path>
+										</g>
+									</g>
+								</div>
+								<div class="slider__dot"></div>
+								<div class="slider__inner"></div>
+							</div>
+
+							<g>
+								<g >
+									<path d="M344.25,229.5c20.4,0,38.25-17.85,38.25-38.25S364.65,153,344.25,153S306,170.85,306,191.25S323.85,229.5,344.25,229.5z     M165.75,229.5c20.4,0,38.25-17.85,38.25-38.25S186.15,153,165.75,153s-38.25,17.85-38.25,38.25S145.35,229.5,165.75,229.5z     M255,408c66.3,0,122.4-43.35,145.35-102h-290.7C132.6,364.65,188.7,408,255,408z M255,0C114.75,0,0,114.75,0,255    s114.75,255,255,255s255-114.75,255-255S395.25,0,255,0z M255,459c-112.2,0-204-91.8-204-204S142.8,51,255,51s204,91.8,204,204    S367.2,459,255,459z" ></path>
+								</g>
+							</g>
+            </svg>
+            <div class="row">
+            <!--<div class="opcoes col-sm-4">
+            Muita dor
+            </div>
+            <div class="opcoes col-sm-4">
+            Normal
+            </div>
+            <div class="opcoes col-sm-4">
+            Sem dor
+            </div>
+          -->
+          <div class="botao col-sm">
+            <a href="#" data-target="tela-1" onclick="mudaTela('tela-1')" class="avaliacao__btn">Enviar</a>
+          </div>
+          <div class="comentario col-sm">
+            <form>
+              <input type="text" id="fname" name="fname" placeholder="Adicionar comentário">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+	
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<script type="text/javascript">
+	
+let links = document.querySelectorAll('#navega a')
+
+for (link of links) {
+	let target = link.getAttribute('data-target')
+
+	link.addEventListener('click', function() {
+		mudaTela(target)
+	})
+}
+
+
+function mudaTela(target) {
+	let tela_target = document.getElementById(target)
+	let link_target = document.querySelector('a[data-target="'+target+'"]')
+
+	document.querySelector('div.tela.active').classList.remove('active')
+	document.querySelector('a.active').classList.remove('active')
+
+	tela_target.classList.add('active')
+	link_target.classList.add('active')
+}
+	
+	
+	
+	
+	
+$(function(){
+  var down = false;
+  var dot = $('.slider__dot');
+  var emoji = $('.slider__img')
+  var position = $('#slider').width()/2;
+  var popup = $('.avaliacao');
+  dot.css('left', position);
+  emoji.css('left', position);
+  
+  $('#slider').mousedown(function(e){
+    if(e.which==1){
+      down = true;
+    popup.addClass('active');
+    }  
+  });
+  
+  $(window).mouseup(function(){
+    if(down==true){
+      down = false;
+    popup.removeClass('active');      
+    }  
+  });
+  
+  $(window).mousemove(function(e){
+   var perc = 0;
+   var moveX,moveXInner;
+    if(down==true){
+     
+    moveX = e.pageX - $('#slider').offset().left;
+    moveXInner = e.pageX - $('#slider').offset().left - position;
+
+    if(moveX<0){  moveX=0; moveXInner=187;}
+    if(moveX>340){
+      moveX=340;
+      moveXInner=187;
+    }
+      
+      if(moveX>position){
+      $('.slider__icon--big').css('fill', '#41e974');    
+      $('.icon__path').attr('d', 'M344.25,229.5c20.4,0,38.25-17.85,38.25-38.25S364.65,153,344.25,153S306,170.85,306,191.25S323.85,229.5,344.25,229.5z     M165.75,229.5c20.4,0,38.25-17.85,38.25-38.25S186.15,153,165.75,153s-38.25,17.85-38.25,38.25S145.35,229.5,165.75,229.5z     M255,408c66.3,0,122.4-43.35,145.35-102h-290.7C132.6,364.65,188.7,408,255,408z M255,0C114.75,0,0,114.75,0,255    s114.75,255,255,255s255-114.75,255-255S395.25,0,255,0z M255,459c-112.2,0-204-91.8-204-204S142.8,51,255,51s204,91.8,204,204    S367.2,459,255,459z');        $('.slider__inner').removeClass('left').addClass('right');
+        perc = (moveXInner*position/2)/100;
+        
+      }
+      if(moveX<position){
+        $('.icon__path').attr('d', 'M344.3,229.5c20.4,0,38.3-17.9,38.3-38.3S364.6,153,344.3,153S306,170.9,306,191.3S323.9,229.5,344.3,229.5z		 M165.8,229.5c20.4,0,38.3-17.9,38.3-38.3S186.1,153,165.8,153s-38.3,17.9-38.3,38.3S145.4,229.5,165.8,229.5z M258.2,276			c-66.3-0.2-122.5,43-145.7,101.6l290.7,0.9C380.4,319.7,324.5,276.2,258.2,276z M255,0C114.8,0,0,114.8,0,255s114.8,255,255,255			s255-114.8,255-255S395.3,0,255,0z M255,459c-112.2,0-204-91.8-204-204S142.8,51,255,51s204,91.8,204,204S367.2,459,255,459z');
+        $('.slider__icon--big').css('fill', '#D7290C');
+        $('.slider__inner').removeClass('right').addClass('left');
+       
+  
+        perc = Math.abs((moveXInner*position/2)/100);
+            console.log(perc);
+      }
+    $('.slider__inner').css('width', perc);
+    dot.css('left', moveX );
+      emoji.css('left', moveX);
+    }    
+  });
+});
+</script>
 </body>
 </html>
